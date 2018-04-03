@@ -1,0 +1,68 @@
+1，	创建项目 django-admin startproject project
+2，	进入 project 创建应用 python manage.py startapp myApp
+3，  在setting 下面激活应用 添加一个myApp
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        "myApp"
+    ]
+
+4，	在项目里面 __init__.py添加
+    import pymysql pymysql.install_as_MySQLdb()
+	在setting.py 配置mysql数据库 DATABASES = { 
+	        'default': { 
+	            'ENGINE': 'django.db.backends.mysql', 
+	            'NAME': "myappdata", 
+	            'USER': 'root', 
+	            'PASSWORD': '123456', 
+	            'HOST': '127.0.0.1', 
+	            'PORT': '3306' 
+	        } 
+	}
+
+5，myApp 配置模型 models.py
+
+6，生成迁移文件 python manage.py makemigrations
+
+7，执行迁移文件 python manage.py migrate
+
+
+/* 下午2:41:57 127.0.0.1 test2 */
+
+INSERT INTO `grades` (`id`, `gname`, `gdate`, `ggirlnum`, `gboynum`, `isDelete`) VALUES (NULL, 'python4', '2017-05-04', '3', '75', '0');
+
+
+
+#### 创建超级用户
+python manage.py createsuperuser
+
+
+
+添加session
+pip3 install django-redis-sessions
+
+redis创建密码
+127.0.0.1:6379> config set requirepass hefeng123
+通过密码进入
+127.0.0.1:6379> auth hefeng123
+
+### git的使用
+
+…or create a new repository on the command line
+ echo "# python" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hefeng2018/python.git
+git push -u origin master
+…or push an existing repository from the command line
+ git remote add origin https://github.com/hefeng2018/python.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+Import code
