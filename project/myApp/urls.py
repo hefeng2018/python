@@ -32,4 +32,11 @@ urlpatterns = [
   url(r'^actionLogin/', views.actionLogin),
   url(r'^main/', views.main),
   url(r'^logout/', views.logout1),
+
+  ### axf
+  url(r'^home/', views.home),
+  url(r'^mine/', views.mine),
+  url(r'^market/', views.market),
+  url(r'^cart/', views.cart),
+  url(r'^base/', views.base1),
 ]

@@ -131,6 +131,13 @@ APPEND_SLASH=False
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+### 静态文件目录
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+### 上传文件路径
+MDEIA_ROOT = os.path.join(BASE_DIR, r'static\mdeia')
 ### redis 设置
 SESSION_ENGINE = "redis_sessions.session"
 SESSION_REDIS_HOST = '127.0.0.1'
@@ -138,5 +145,7 @@ SESSION_REDIS_PORT = 6379
 SESSION_REDIS_DB = 0
 SESSION_REDIS_PASSWORD = ''
 SESSION_REDIS_PREFIX = 'session'
+
+
 
 

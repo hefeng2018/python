@@ -131,3 +131,19 @@ from django.contrib.auth import logout
 def logout1(request):
   logout(request)
   return redirect('/main/')
+
+
+def home(request):
+  return render(request, "myApp/home.html")
+
+def market(request):
+  return render(request, "myApp/market.html")
+
+def cart(request):
+  return render(request, "myApp/cart.html")
+
+def mine(request):
+  return render(request, "myApp/mine.html")
+
+def base1(request):
+  return render(request, "myApp/base.html")

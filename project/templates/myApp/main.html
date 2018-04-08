@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>登入：{{username}}</h1>
+    {% csrf_token %}
     <br/><a href="/login">登入</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout/">退出</a>
 </body>
 </html>
