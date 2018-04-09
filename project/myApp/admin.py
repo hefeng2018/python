@@ -34,8 +34,8 @@ class StudentAdmin(admin.ModelAdmin):
     #     return self.sname
     # sname1.short_description = "姓名"
 
-    list_display = ["pk", "sname", "sage", gender, "scondent", "sgrade", "isDelete"]
-    fields = ["sname", "sage", "sgender", "scondent", "isDelete", "sgrade"]
+    list_display = ["pk", "sname", "sage", gender, "scontend", "sgrades", "isDelete"]
+    fields = ["sname", "sage", "sgender", "scontend", "isDelete", "sgrades"]
 
 
 

@@ -67,3 +67,55 @@ class Students(models.Model):
   def createStudent(cls, name, age, gender, contend,  grade, lastT, createT, isDel=False):
     stu = cls(sname=name, sage=age, sgender=gender, scontend=contend, sgrades=grade, lasttime=lastT, createtime=createT, isDelete=isDel)
     return stu
+
+class Nav(models.Model):
+  img = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  trackid = models.CharField(max_length=100)
+  isDelete = models.BooleanField(default=False)
+  def __str__(self):
+    return self.name
+  class Meta:
+    db_table = "nav"
+
+class MustBuy(models.Model):
+  img = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  trackid = models.CharField(max_length=100)
+  isDelete = models.BooleanField(default=False)
+  def __str__(self):
+    return self.name
+  class Meta:
+    db_table = "must_buy"
+
+class Wheel(models.Model):
+  img = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  trackid = models.CharField(max_length=100)
+  isDelete = models.BooleanField(default=False)
+  def __str__(self):
+    return self.name
+  class Meta:
+    db_table = "wheel"
+
+class Goods(models.Model):
+  productid = models.IntegerField()
+  productimg = models.CharField(max_length=255)
+  productname = models.CharField(max_length=255)
+  productlongname = models.CharField(max_length=255)
+  isxf = models.CharField(max_length=255)
+  pmdesc = models.CharField(max_length=255)
+  specifics = models.CharField(max_length=255)
+  price = models.CharField(max_length=255)
+  marketprice = models.CharField(max_length=255)
+  categoryid = models.IntegerField()
+  childcid = models.IntegerField()
+  childcidname = models.CharField(max_length=255)
+  dealerid = models.IntegerField()
+  storenums = models.IntegerField()
+  productnum = models.IntegerField()
+  isDelete = models.BooleanField(default=False)
+  def __str__(self):
+    return self.productname
+  class Meta:
+    db_table = "goods"

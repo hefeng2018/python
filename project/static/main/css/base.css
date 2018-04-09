@@ -56,21 +56,21 @@ footer dl dd{
     height: 0.708333rem;
 }
 
-footer .home sapn{
-    background: url("/static/main/img/home.png") no-repeat;
+footer .home span{
+    background: url("/static/main/img/home.jpeg") no-repeat;
     background-size: 0.513889rem;
 }
 
-footer .market sapn{
-    background: url("/static/mian/img/market.png") no-repeat;
+footer .market span{
+    background: url("/static/main/img/market.jpeg") no-repeat;
     background-size: 0.513889rem;
 }
-footer .cart sapn{
-    background: url("/static/main/img/cart.png") no-repeat;
+footer .cart span{
+    background: url("/static/main/img/cart.jpeg") no-repeat;
     background-size: 0.513889rem;
 }
-footer .mine sapn{
-    background: url("/static/main/img/mine.png") no-repeat;
+footer .mine span{
+    background: url("/static/main/img/mine.jpeg") no-repeat;
     background-size: 0.513889rem;
 }
 
