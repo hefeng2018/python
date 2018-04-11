@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Grades, Students
+from .models import Grades, Students, Wheel, Nav
 
 # Register your models here.
 class StudentInfo(admin.TabularInline):
@@ -38,9 +38,19 @@ class StudentAdmin(admin.ModelAdmin):
     fields = ["sname", "sage", "sgender", "scontend", "isDelete", "sgrades"]
 
 
+class WheelAdmin(admin.ModelAdmin):
+    list_display = ["pk", "img", "name", "trackid", "isDelete"]
+    fields = ["img", "name", "trackid", "isDelete"]
+class NavAdmin(admin.ModelAdmin):
+    list_display = ["pk", "img", "name", "trackid", "isDelete"]
+    fields = ["img", "name", "trackid", "isDelete"]
 
 
 admin.site.register(Grades, GradesAdmin)
 admin.site.register(Students, StudentAdmin)
+admin.site.register(Wheel, WheelAdmin)
+admin.site.register(Nav, NavAdmin)
+
+
 
 

@@ -1,19 +1,36 @@
-{% load static from staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'main/css/swiper.css' %}">
+{% extends 'myApp/base.html' %}
 
-        <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/bootstrap.js' %}"></script>
-        <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/swiper.js' %}"></script>
-        {% block linkscript %}
-        {% endblock linkscript %}
-    </head>
-    <body>
+{% block base %}
 
-    </body>
-</html>
+<div id="home">
+    <section class="swiper-container" id="topSwiper">
+        <div class="swiper-wrapper">
+            {% for item in wheelsList %}
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="{{item.img}}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+    </section>
+
+    <section class="topMenu">
+        <nav>
+            <ul>
+                {% for item in navList %}
+                    <li>
+                        <a href="#">
+                            <img src="{{item.img}}">
+                            <span>{{item.name}}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </section>
+
+</div>
+
+{% endblock base %}

@@ -8,11 +8,13 @@
         <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'main/css/swiper.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}">
 
         <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/jquery.js' %}"></script>
         <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/bootstrap.js' %}"></script>
         <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/swiper.js' %}"></script>
         <script type="text/javascript" charset="utf-8"  src="{% static 'main/js/base.js' %}"></script>
+        <script type="text/javascript" charset="utf-8"  src="{% static 'home/js/home.js' %}"></script>
         {% block linkscript %}
         {% endblock linkscript %}
     </head>
@@ -22,9 +24,9 @@
         </header>
 
         <div>
-            {% block basea %}
+            {% block base %}
 
-            {% endblock basea %}
+            {% endblock base %}
         </div>
 
         <footer>

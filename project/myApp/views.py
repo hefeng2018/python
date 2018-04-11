@@ -132,9 +132,11 @@ def logout1(request):
   logout(request)
   return redirect('/main/')
 
-
+from .models import Wheel, Nav
 def home(request):
-  return render(request, "myApp/home.html")
+  WheelList = Wheel.objects.all()
+  navList = Nav.objects.all()
+  return render(request, "myApp/home.html", {"title": "主页", "wheelsList": WheelList, "navList": navList})
 
 def market(request):
   return render(request, "myApp/market.html")
